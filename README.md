@@ -8,3 +8,4 @@ Ordered list of steps involved ->
 3) visualize.py (for analyzing and visualizing data from the database as charts).
 4) app.py (serves as the backend web server, handling requests, queries, and rendering pages).
 5) index.html (the frontend interface shown to users for searching, viewing, and visualizing data).
+[ UI with Search (app.py + index.html) ]
