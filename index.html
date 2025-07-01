@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>Product Browser</title> <!-- Set the title of the browser tab -->
+</head>
+<body>
+  <h1>Products</h1>
+  <form method="get">
+    <input type="text" name="q" placeholder="Search..." value="{{ query }}">  <!-- Search box that submits 'q' as a GET query parameter -->
+    <button type="submit">Search</button> <!-- Search button -->
+  </form>
+  <img src="{{ url_for('static', filename='plots/price_rating.png') }}" alt="Price vs Rating"> <!-- Embed the price vs rating scatter plot image -->
+  <hr>
+  <ul>
+    {% for title, price, rating, desc in products %} <!-- Loop over each product in the list passed from app.py -->
+      <li>
+        <strong>{{ title }}</strong> — ${{ price }}, ★{{ rating }}<br> 
+        <em>{{ desc }}</em> 
+        <!-- Display product title, price, rating, and description -->
+      </li>
+    {% else %}
+      <li>No products found.</li> <!-- If the product list is empty, show this message -->
+    {% endfor %}
+  </ul>
+</body>
+</html>
