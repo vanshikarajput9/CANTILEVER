@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Upload Image</title></head>
+<body>
+    <h2>Upload an Image for OCR</h2>
+    <form method="post" enctype="multipart/form-data">
+        <!-- method="post": sends form data via POST request -->
+        <!-- enctype="multipart/form-data": required for file uploads -->
+        <input type="file" name="image" required>  <!-- required: ensures the user cannot submit the form without selecting a file -->
+        <input type="submit" value="Extract Text"> <!-- Submit button to send the form and trigger OCR -->
+    </form>
+</body>
+</html>
